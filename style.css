@@ -237,7 +237,7 @@ a:hover{
 }
 .home-img{
     /*background-image: url(http://drive.google.com/uc?export=view&id=1hwM6h-QuqKc0HVHNp2Eu86TY_vNghlmL);*/
-    background-image: url('/../images/picHome.jpg');
+    background-image: url('images/picHome.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -284,7 +284,7 @@ a:hover{
 }
 .timeline-img{
     /*background-image: url(http://drive.google.com/uc?export=view&id=1ReQgs1XHjUEXqwjp0ioxygpbdcAx-5RD);*/
-    background-image: url('/../images/picTimeline.jpg');
+    background-image: url('images/picTimeline.jpg');
     height: 70vh;
     width: 30vw;
     background-position: center;
@@ -370,17 +370,17 @@ a:hover{
 }
 .gallery-img:nth-child(1){
     /*background-image: url(http://drive.google.com/uc?export=view&id=1c7HJpg91CP6R1stzI_Z5_DO17QXIu82r);*/
-    background-image: url('/../images/picGallery1.jpg');
+    background-image: url('images/picGallery1.jpg');
     background-position-x: right;
 }
 .gallery-img:nth-child(3){
     /*background-image: url(http://drive.google.com/uc?export=view&id=1gTExgnFK0YYiJ-uxfvEZ86sEcLenh4il);*/
-    background-image: url('/../images/picGallery2.jpg');
+    background-image: url('images/picGallery2.jpg');
 }
 .gallery-img:nth-child(2){
     background-position-y: top;
     /*background-image: url(http://drive.google.com/uc?export=view&id=1LwU-Zmf1g3oFrUkDW_f62Vc-XGn2Xuv8);*/
-    background-image: url('/../images/picGallery3.jpg');
+    background-image: url('images/picGallery3.jpg');
 }
 @media (max-width:1000px){
     .gallery{
@@ -425,7 +425,7 @@ a:hover{
     height: 120vh;
     width: 100%;
     /*background-image: url(http://drive.google.com/uc?export=view&id=1b6K8jRUunC_swuIwEBalx0MrzESjaHEE);*/
-    background-image: url('/../images/picHands.jpg');
+    background-image: url('images/picHands.jpg');
     background-size: cover;
     background-position-y: center;
     background-attachment: fixed;
@@ -482,7 +482,7 @@ a:hover{
     height: 100vh;
     width: 40vw;
     /*background-image: url(http://drive.google.com/uc?export=view&id=13wqfwwvIqXiD7a3R27_N2mIsVuPutwHb);*/
-    background-image: url('/../images/picRegistry.jpg');
+    background-image: url('images/picRegistry.jpg');
     background-size: cover;
     background-position-y: top;
     background-repeat: no-repeat;
