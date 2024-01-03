@@ -190,7 +190,7 @@ a:hover{
     border: 5px solid rgba(255,255,255,0.3);
     width: 140px;
     height: 140px;
-    border-radius: 99px;
+    border-radius: 90px;
   }
   
   .days,
@@ -211,7 +211,7 @@ a:hover{
     font-size: 0.7em;
   }
   
-  @media (max-width: 800px) {
+  @media (max-width: 700px) {
     
     .countdown-container {
       max-width: 90%;
@@ -222,8 +222,8 @@ a:hover{
     .minutes-container, 
     .seconds-container {
       font-size: 0.8em;
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
     }
   }
 
@@ -315,6 +315,44 @@ a:hover{
     }
 }
 
+/* <===================EVENT===================> */
+
+.event{
+    display: block;
+    background-color: var(--grey-color-light);
+    float: left;
+    position: relative;
+    top: -30vh;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    padding: 8vh var(--horizontal-margin-spacing);
+}
+
+.event-container{
+    display: flex;
+    flex-direction: row;
+    margin: 8vh 0;
+}
+
+.eventings{
+    margin: 100px;
+}
+
+.event-container .text{
+    padding: 1rem 0 1rem 4rem;
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 /* <===================STORY===================> */
 
 #story{
@@ -369,17 +407,14 @@ a:hover{
     background-position: center;
 }
 .gallery-img:nth-child(1){
-    /*background-image: url(http://drive.google.com/uc?export=view&id=1c7HJpg91CP6R1stzI_Z5_DO17QXIu82r);*/
     background-image: url('images/picGallery1.jpg');
     background-position-x: right;
 }
 .gallery-img:nth-child(3){
-    /*background-image: url(http://drive.google.com/uc?export=view&id=1gTExgnFK0YYiJ-uxfvEZ86sEcLenh4il);*/
     background-image: url('images/picGallery2.jpg');
 }
 .gallery-img:nth-child(2){
     background-position-y: top;
-    /*background-image: url(http://drive.google.com/uc?export=view&id=1LwU-Zmf1g3oFrUkDW_f62Vc-XGn2Xuv8);*/
     background-image: url('images/picGallery3.jpg');
 }
 @media (max-width:1000px){
@@ -424,7 +459,6 @@ a:hover{
 .hands{
     height: 120vh;
     width: 100%;
-    /*background-image: url(http://drive.google.com/uc?export=view&id=1b6K8jRUunC_swuIwEBalx0MrzESjaHEE);*/
     background-image: url('images/picHands.jpg');
     background-size: cover;
     background-position-y: center;
@@ -481,7 +515,6 @@ a:hover{
     display: block;
     height: 100vh;
     width: 40vw;
-    /*background-image: url(http://drive.google.com/uc?export=view&id=13wqfwwvIqXiD7a3R27_N2mIsVuPutwHb);*/
     background-image: url('images/picRegistry.jpg');
     background-size: cover;
     background-position-y: top;
@@ -517,6 +550,51 @@ a:hover{
     }
 }
 
+/* <===================COUNTER ===================> */
+.count-sec {
+    min-height: 200px;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.count-sec .count-overlay {
+    background-color: #2f2f2f;
+    opacity: .4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.count-sec .count-content .count-li {
+    cursor: pointer;
+}
+
+.count-sec .num {
+    color: #FFFFFF;
+    font-size: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    -webkit-transition: .8s ease;
+    -o-transition: .8s ease;
+    transition: .8s ease;
+}
+
+.count-sec .heading {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.count-sec .text-des {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
 
 /* <===================PARTING MESSAGE===================> */
 .parting-message h1{
