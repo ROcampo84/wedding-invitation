@@ -16,141 +16,52 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">L&R</label>
+        <label class="logo"><a onclick="goToIndex()">L&R</a></label>
         <ul class="text">
-            <li><a href="#story" onclick="myFunction()">HISTORIA</a></li>
-            <li><a href="#event" onclick="myFunction()">EVENTO</a></li>
-            <li><a href="#registry" onclick="myFunction()">PROMESAS</a></li>
+            <li><a href="#index" onclick="goToIndex()">LA BODA</a></li>
         </ul>
     </nav>
 
+    <div>
+        <div>
 
-    <div class="home hz-margin">
-        <h2>¡Estamos felices de tenerte!</h2>
-    </div>
-
-
-    <!-- <div class="home-img home-img-sm"></div>
-    <div class="timeline hz-margin reveal">
-        <h2>¡Estamos felices de tenerte!</h2>
-    </div> -->
-
-
-    <div class="v-reposition-container">
-        <div class="h-reposition-container">
-
-
-            <div id="story" class="hz-margin">
-                <h3 class="reveal">Nuestra Historia<br>
-                    no es una historia de Amor ordinaria.
-                </h3>
-                <p class="text reveal">Esta es una historia sencilla, pero una que no es fácil contar. Como en una fábula, hay dolor. Y, como una fábula, está llena de maravillas y de felicidad.</p>
-            </div>
-
-
-            <div class="gallery hz-margin reveal">
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-                <div class="gallery-img"></div>
-            </div>
-
-
-            <div class="quote reveal">
-                <h1>“De nadie seré, solo de ti. Hasta que mis huesos se vuelvan cenizas y mi corazón deje de latir”.</h1>
-                <div class="author text">Pablo Neruda</div>
-            </div>
-
-
-            <div class="hands" id="parallax1"></div>
-
-
-            <div id="event">
-                <h2 class="reveal">Evento</h2>
-                <div class="stay-container reveal">
-                    <div class="stay-item">
-                        <h3>01. <br>
-                            ¿Cómo llegar?
-                        </h3>
-                        <div class="text">Sigue el enlace<br> a Google Maps</div>
-                        <a href="https://maps.app.goo.gl/ujVjW93oLWptDdM56"><div class="text links">ENLACE MAPA</div></a>
-                    </div>
-                    <div class="stay-item">
-                        <h3>02. <br>
-                            ¿Cómo vestir?
-                        </h3>
-                        <div class="text">Andá cómodo<br> Nuestra propuesta:</div>
-                        <a href="https://www.pinterest.com/ideas/cocktail-wedding-attire/952114239431/"><div class="text links">TENIDA COCKTAIL</div></a>
-                    </div>
-                    <!-- <div class="stay-item">
-                        <h3>03. <br>
-                            ¿Qué llevar?
-                        </h3>
-                        <div class="text">No te pedimos regalos<br>pero aceptamos donaciones</div>
-                        <div class="text links">CUENTAS BANCARIAS</div>
-                    </div> -->
-                </div>
-            </div>
-
-
-            <div id="registry">
-                <div class="registry-container reveal">
-                    <h3>Promesas</h3>
-                    <div class="text">
-                        Desde este momento, la vida ha comenzado, tú eres mi elegida.<br>
-                        Justo a tu lado es dónde pertenezco, desde este momento y siempre.<br>
-                        Yo he sido bendecido, yo vivo solo para tu felicidad.<br>
-                        Y por tu amor, daré hasta mi último aliento.<br>
-                        Te doy mi mano a ti con todo mi corazón.<br>
-                        Tú y yo nunca nos separaremos. Mis sueños se vuelven realidad por ti.<br>
-                        Desde este momento y tanto como viva, yo te amaré.<br>
-                        Te prometo esto, no hay nada que no daría.<br>
-                        Tú eres la razón por la que yo creo en el amor.<br>
-                        Todo lo que necesitamos, somos solo nosotros dos.
-                    </div>
-                    <button class="huge-btn text">CONTRIBUIR</button>
-                </div>
-                <div class="registry-img registry-img-lg" id="parallax2"></div>
-            </div>
-            <div class="registry-img registry-img-sm"></div>
-
-
-            <div class="parting-message reveal">
-                <h1>Esperamos verte!</h1>
-                <button class="huge-btn">CONFIRMAR</button>
-            </div>
-
-            
-            <div class="container-out">
-                <section class="countdown-container">
-    
-                    <div class="days-container">
-                      <div class="days"></div>
-                      <div class="days-label">Días</div>
-                    </div>
+            <div style=" background: url(wedding/img/blanco.jpg); padding:0px 0; background: inherit; margin: 50px 20px;">
+                <div style="border: 1px solid #999876; border-radius: 20px; padding: 50px 0px;">
                     
-                    <div class="hours-container">
-                      <div class="hours"></div>
-                      <div class="hours-label">Horas</div>
-                    </div>
+                    <h4 class="large-heading mt-2 mb-1" style="margin:auto; width:50%; padding:10px;">Confirmar asistencia</h4>
                     
-                    <div class="minutes-container">
-                      <div class="minutes"></div>
-                      <div class="minutes-label">Minutos</div>
+                    <div>
+                        <div class="author text">Gracias por acompañarnos en este momento tan importante.</div>
                     </div>
-                    
-                    <div class="seconds-container">
-                      <div class="seconds"></div>
-                      <div class="seconds-label">Segundos</div>
-                    </div>
-                  </section>
-            </div>
         
+                    <div class="row  flex-column" style="flex-direction:column">
+                        
+                        <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;">
+                            <input type="text" name="nombreyapellido" id="nombreyapellido" placeholder="Nombre y Apellido" class="form-control" required="Es necesario que ingrese su nombre.">
+                        </div>
+
+                        <br>
+                        <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;" >
+                            <input type="number" name="telefono" id="telefono" placeholder="Número Celular" class="form-control" required="Es necesario que ingrese su nro celular (formato 09XX######).">
+                        </div>
+
+
+                        <input type="hidden" name="id_invi_n" id="id_invi_n" value="0" wfd-invisible="true">
+                    </div>
+
+                    <br>
+
+                    <a type="button" class="huge-btn" style="margin:auto; left:50%; padding:10px;" onclick="">Confirmar!</a>
+
+                    <br>
+                </div>
+            </div>        
 
             <footer>
                 <h2>Contáctanos al</h2>
-                <h2>Liz Lezcano: +595-992-244507</h2>
-                <h2>Rodrigo Ocampo: +595-985-209533</h2>
-                <div class="text">© 2024 para Liz y Rodri: La boda. Desarrollado por <a href="https://github.com/ROcampo84" class="text">@ROcampoDev</a></div>
+                <h3>Liz Lezcano: +595-992-244507</h3>
+                <h3>Rodrigo Ocampo: +595-985-209533</h3>
+                <div class="text">© 2024 Liz y Rodri: La boda.<br>Desarrollado por <a href="https://github.com/ROcampo84" class="text">@ROcampoDev</a></div>
             </footer>
         </div>
     </div>

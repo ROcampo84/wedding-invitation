@@ -114,3 +114,25 @@ var Difference_In_Time = date2.getTime() - date1.getTime();
 // To calculate the no. of days between two dates
 var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
 countDownClock(Difference_In_Days, 'days');
+
+
+
+/************************* GIFTING ******************************/
+function goToGifting() {
+  window.location.href = "gifting.html";
+}
+
+
+
+
+/************************* CHECKIN ******************************/
+function goToCheckin() {
+  window.location.href = "checkin.html";
+}
+
+
+
+/************************* INDEX ******************************/
+function goToIndex() {
+  window.location.href = "index.html";
+}
