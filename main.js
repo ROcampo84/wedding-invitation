@@ -122,7 +122,22 @@ function goToGifting() {
   window.location.href = "gifting.html";
 }
 
+var divGifting = document.getElementById("giftingSection");
+var displayGifting = 1;
 
+function showGifting()
+{
+  if (displayGifting == 1)
+  {
+    divGifting.style.display = 'block';
+    displayGifting = 0;
+  }
+  else
+  {
+    divGifting.style.display = 'none';
+    displayGifting = 1;
+  }
+}
 
 
 /************************* CHECKIN ******************************/
