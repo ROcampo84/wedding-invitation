@@ -145,6 +145,30 @@ function goToCheckin() {
   window.location.href = "checkin.html";
 }
 
+function btnCheckin()
+{
+  alert('Button clicked');
+  window.location.href = "index.html";
+}
+
+
+var divCheckin = document.getElementById("checkinX");
+var displayCheckin = 1;
+
+function showCheckin()
+{
+  if (displayCheckin == 1)
+  {
+    window.location.href = "#checkinX";
+    divCheckin.style.display = 'block';
+    displayCheckin = 0;
+  }
+  else
+  {
+    divCheckin.style.display = 'none';
+    displayCheckin = 1;
+  }
+}
 
 
 /************************* INDEX ******************************/

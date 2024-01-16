@@ -39,7 +39,8 @@
                 Sábado, 20 de Abril, 2024 <br>
                 Tatarê Jardín Eventos, Ñemby
 
-                <button onclick="goToCheckin()" class="huge-btn">CONFIRMAR</button>
+                <!-- <button onclick="goToCheckin()" class="huge-btn">CONFIRMAR</button> -->
+                <button onclick="showCheckin()" class="huge-btn">CONFIRMAR</button>
             </div>
             
             <div class="home-img" id="home-img-lg"></div>
@@ -179,7 +180,44 @@
 
             <div class="parting-message reveal">
                 <h1>Esperamos verte!</h1>
-                <button onclick="goToCheckin()" class="huge-btn">CONFIRMAR</button>
+                <!-- <button onclick="goToCheckin()" class="huge-btn">CONFIRMAR</button> -->
+                <button onclick="showCheckin()" class="huge-btn">CONFIRMAR</button>
+            </div>
+
+
+            <div id="checkinX" style="display: none;">
+                <div style=" background: url(wedding/img/blanco.jpg); padding:0px 0; background: inherit; margin: 50px 20px;">
+                    <div style="border: 1px solid #999876; border-radius: 20px; padding: 50px 0px;">
+                        
+                        <h4 class="large-heading mt-2 mb-1" style="margin:auto; width:50%; padding:10px;">Confirmar asistencia</h4>
+                        
+                        <div>
+                            <div class="author text">Gracias por acompañarnos en este momento tan importante.</div>
+                        </div>
+            
+                        <div class="row  flex-column" style="flex-direction:column">
+                            
+                            <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;">
+                                <input type="text" name="nombreyapellido" id="nombreyapellido" placeholder="Nombre y Apellido" class="form-control">
+                            </div>
+    
+                            <br>
+                            <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;" >
+                                <input type="number" name="telefono" id="telefono" placeholder="Número Celular" class="form-control">
+                            </div>
+    
+    
+                            <input type="hidden" name="id_invi_n" id="id_invi_n" value="0" wfd-invisible="true">
+                        </div>
+    
+                        <br>
+    
+                        <a type="button" class="huge-btn" style="margin:auto; left:50%; padding:10px;" onclick="btnCheckin">Confirmar!</a>
+                        <button type="submit" class="huge-btn" style="margin:auto; left:50%; padding:10px;" onclick="btnCheckin">Confirmar!</button>
+    
+                        <br>
+                    </div>
+                </div>
             </div>
 
             
