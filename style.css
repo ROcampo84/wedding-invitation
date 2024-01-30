@@ -205,8 +205,8 @@ a:hover{
   .hours,
   .minutes,
   .seconds {
-    font-size: 2.1em; 
-    margin: 10px 0;
+    font-size: 4.5em; 
+    margin: 0px 0;
   }
   
   
@@ -216,7 +216,7 @@ a:hover{
   .seconds-label {
     text-transform: uppercase;
     margin-bottom: 5px;
-    font-size: 0.7em;
+    font-size: 1.0em;
   }
   
   @media (max-width: 700px) {
@@ -295,6 +295,70 @@ a:hover{
     width: 30vw;
     background-position: center;
     background-size: cover;
+}
+.timing-img01{
+    background-image: url('images/timing01.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
+.timing-img02{
+    background-image: url('images/timing02.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
+.timing-img03{
+    background-image: url('images/timing03.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
+.timing-img04{
+    background-image: url('images/timing04.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
+.timing-img05{
+    background-image: url('images/timing05.png');
+    height: 15vh;
+    width: 40vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
+.timing-img06{
+    background-image: url('images/timing06.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
+.timing-img07{
+    background-image: url('images/timing07.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
+.timing-img08{
+    background-image: url('images/timing08.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
 }
 .timings{
     margin: 30px;
