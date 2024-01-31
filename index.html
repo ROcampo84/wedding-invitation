@@ -208,7 +208,7 @@
             </div>
 
 
-            <div id="checkinX" style="display: none;">
+            <div id="checkin" style="display: none;">
                 <div style=" background: url(wedding/img/blanco.jpg); padding:0px 0; background: inherit; margin: 50px 20px;">
                     <div style="border: 1px solid #999876; border-radius: 20px; padding: 50px 0px;">
                         
@@ -222,12 +222,12 @@
                         <div class="row  flex-column" style="flex-direction:column">
                             
                             <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;">
-                                <input type="text" name="nombreyapellido" id="nombreyapellido" placeholder="Nombre y Apellido" class="form-control">
+                                <input type="text" name="nombreyapellido" id="checkName" placeholder="Nombre y Apellido" class="form-control">
                             </div>
     
                             <br>
                             <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;" >
-                                <input type="number" name="telefono" id="telefono" placeholder="Número Celular" class="form-control">
+                                <input type="number" name="telefono" id="checkPhone" placeholder="Número Celular" class="form-control">
                             </div>
     
     
@@ -236,9 +236,7 @@
     
                         <br>
     
-                        <!-- <a type="button" class="huge-btn" style="margin:auto; left:50%; padding:10px;" onclick="btnCheckin">Confirmar!</a> -->
-                        <button type="submit" class="huge-btn" style="margin:auto; left:50%; padding:10px;" onclick="btnCheckin">Confirmar!</button>
-    
+                        <button id="btnCheckIn" type="submit" class="huge-btn" style="margin:auto; left:50%; padding:10px;" >Confirmar!</button>
                         <br>
                     </div>
                 </div>

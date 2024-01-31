@@ -1,6 +1,8 @@
 const parallax = document.getElementById("home-img-lg");
 const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
+var buttonCheckIn = document.getElementById("btnCheckIn");
+buttonCheckIn.onclick = fnCheckIn;
 
 window.addEventListener("scroll", function()
 {
@@ -145,21 +147,20 @@ function goToCheckin() {
   window.location.href = "checkin.html";
 }
 
-function btnCheckin()
+function fnCheckIn()
 {
   alert('Button clicked');
-  window.location.href = "index.html";
 }
 
 
-var divCheckin = document.getElementById("checkinX");
+var divCheckin = document.getElementById("checkin");
 var displayCheckin = 1;
 
 function showCheckin()
 {
   if (displayCheckin == 1)
   {
-    window.location.href = "#checkinX";
+    window.location.href = "#checkin";
     divCheckin.style.display = 'block';
     displayCheckin = 0;
   }
