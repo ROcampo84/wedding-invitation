@@ -94,7 +94,7 @@ h3{
 nav{
     height: 3vh;
     width: 100%;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 label.logo{
     font-size: 35px;
@@ -238,7 +238,7 @@ a:hover{
 /* <===================HOME===================> */
 
 .container-out{
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -360,6 +360,14 @@ a:hover{
     background-size: cover;
     margin-left: 60px;
 }
+.timing-img09{
+    background-image: url('images/timing09.png');
+    height: 15vh;
+    width: 30vw;
+    background-position: center;
+    background-size: cover;
+    margin-left: 60px;
+}
 .timings{
     margin: 30px;
 }
@@ -395,13 +403,13 @@ a:hover{
     top: -30vh;
     width: 100%;
     backdrop-filter: blur(4px);
-    padding: 8vh var(--horizontal-margin-spacing);
+    padding: 4vh var(--horizontal-margin-spacing);
 }
 
 .event-container{
     display: flex;
     flex-direction: row;
-    margin: 8vh 0;
+    margin: 5vh 0;
 }
 
 .eventings{
@@ -568,7 +576,7 @@ a:hover{
 /* <===================REGISTRY===================> */
 
 #registry{
-    padding: 20vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
+    padding: 5vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
