@@ -1,3 +1,6 @@
+const numbers = /^[0-9]+$/;
+const letters = /^[a-zA-Z]+$/ 
+
 const parallax = document.getElementById("home-img-lg");
 const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
@@ -147,11 +150,53 @@ function goToCheckin() {
   window.location.href = "checkin.html";
 }
 
+
+var vGuestName = document.getElementById("checkName");
+var vGuestPhone = document.getElementById("checkPhone");
 function fnCheckIn()
 {
-  alert('Button clicked');
+  // if (!vGuestName.value.split(" ").join("").match(letters))
+  // {
+  //   vGuestName.value = "";
+  //   alert("Nombre no válido");
+  //   return;
+  // }
+  if (!fnNameValidate()) return;
+
+  // if (!vGuestPhone.value.match(/^\(?(\d{4})\)?[- ]?(\d{3})[- ]?(\d{3})$/))
+  // {
+  //   vGuestPhone.value = "";
+  //   alert("Teléfono no válido. Ejemplo: (09XX)-123-456 ó 09XX123456");
+  //   return;
+  // }
+  if (!fnPhoneValidate()) return;
+  
+  alert("Gracias " + vGuestName.value.toUpperCase() + " por confirmar tu presencia!");
+  vGuestPhone.value = "";
+  vGuestName.value = "";
 }
 
+function fnPhoneValidate()
+{
+  if (!vGuestPhone.value.match(/^\(?(\d{4})\)?[- ]?(\d{3})[- ]?(\d{3})$/))
+  {
+    vGuestPhone.value = "";
+    alert("Teléfono no válido. Ejemplo: (09XX)-123-456 ó 09XX123456");
+    return false;
+  }
+  return true;
+}
+
+function fnNameValidate()
+{
+  if (!vGuestName.value.split(" ").join("").match(letters))
+  {
+    vGuestName.value = "";
+    alert("Nombre no válido");
+    return false;
+  }
+  return true;
+}
 
 var divCheckin = document.getElementById("checkin");
 var displayCheckin = 1;
