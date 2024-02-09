@@ -155,25 +155,17 @@ var vGuestName = document.getElementById("checkName");
 var vGuestPhone = document.getElementById("checkPhone");
 function fnCheckIn()
 {
-  // if (!vGuestName.value.split(" ").join("").match(letters))
-  // {
-  //   vGuestName.value = "";
-  //   alert("Nombre no válido");
-  //   return;
-  // }
+  //Validate name input.
   if (!fnNameValidate()) return;
-
-  // if (!vGuestPhone.value.match(/^\(?(\d{4})\)?[- ]?(\d{3})[- ]?(\d{3})$/))
-  // {
-  //   vGuestPhone.value = "";
-  //   alert("Teléfono no válido. Ejemplo: (09XX)-123-456 ó 09XX123456");
-  //   return;
-  // }
+  //Validate phone input.
   if (!fnPhoneValidate()) return;
   
   alert("Gracias " + vGuestName.value.toUpperCase() + " por confirmar tu presencia!");
+  //Clean fields.
   vGuestPhone.value = "";
   vGuestName.value = "";
+  //Hide Checkin section.
+  showCheckin();
 }
 
 function fnPhoneValidate()
