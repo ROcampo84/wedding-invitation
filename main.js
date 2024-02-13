@@ -4,8 +4,14 @@ const letters = /^[a-zA-Z]+$/
 const parallax = document.getElementById("home-img-lg");
 const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
-var buttonCheckIn = document.getElementById("btnCheckIn");
+const buttonCheckIn = document.getElementById("btnCheckIn");
 buttonCheckIn.onclick = fnCheckIn;
+
+var vGuestName = "";
+var vGuestIndex = 0;
+const guestName = document.getElementById("checkName");
+const guestPhone = document.getElementById("checkPhone");
+const guestsArrObj = [];
 
 window.addEventListener("scroll", function()
 {
@@ -146,33 +152,57 @@ function showGifting()
 
 
 /************************* CHECKIN ******************************/
+
 function goToCheckin() {
   window.location.href = "checkin.html";
 }
 
-
-var vGuestName = document.getElementById("checkName");
-var vGuestPhone = document.getElementById("checkPhone");
 function fnCheckIn()
 {
   //Validate name input.
   if (!fnNameValidate()) return;
+  
   //Validate phone input.
   if (!fnPhoneValidate()) return;
   
-  alert("Gracias " + vGuestName.value.toUpperCase() + " por confirmar tu presencia!");
+  //Validate guest.
+  if (!fnGuestValidate()) return; 
+
+  alert("Gracias " + vGuestName.toUpperCase() + " por confirmar tu presencia!");
   //Clean fields.
-  vGuestPhone.value = "";
-  vGuestName.value = "";
+  guestPhone.value = "";
+  guestName.value = "";
   //Hide Checkin section.
   showCheckin();
 }
 
+function fnGuestValidate()
+{
+  //Load the guests' List.
+  readCSV();
+  
+  //console.log(guestPhone.value);
+  for (var i = 1; i < guestsArrObj.length; i++)
+  //for (var i = 1; i < 2; i++)
+  {
+    //console.log(vPhoneNum);
+    if (compare(guestPhone.value, guestsArrObj[i][1])) 
+    {
+      vGuestName = guestsArrObj[i][0];
+      vGuestIndex = i;
+      return true;
+    }
+  }
+
+  alert("El número de teléfono ingresado no corresponde a ningún invitado.");
+  return false;
+}
+
 function fnPhoneValidate()
 {
-  if (!vGuestPhone.value.match(/^\(?(\d{4})\)?[- ]?(\d{3})[- ]?(\d{3})$/))
+  if (!guestPhone.value.match(/^\(?(\d{4})\)?[- ]?(\d{3})[- ]?(\d{3})$/))
   {
-    vGuestPhone.value = "";
+    guestPhone.value = "";
     alert("Teléfono no válido. Ejemplo: (09XX)-123-456 ó 09XX123456");
     return false;
   }
@@ -181,12 +211,25 @@ function fnPhoneValidate()
 
 function fnNameValidate()
 {
-  if (!vGuestName.value.split(" ").join("").match(letters))
+  if (!guestName.value.split(" ").join("").match(letters))
   {
-    vGuestName.value = "";
+    guestName.value = "";
     alert("Nombre no válido");
     return false;
   }
+  return true;
+}
+
+function compare(string1, string2)
+{
+  if (string1.length != string2.length) return false;
+
+  for (var i = 0; i < string1.length; i++)
+  {
+    //console.log("Comparison: " + string1.charAt(i) + " and " + string2.charAt(i));
+    if (string1.charAt(i) != string2.charAt(i)) return false;
+  }
+
   return true;
 }
 
@@ -212,4 +255,57 @@ function showCheckin()
 /************************* INDEX ******************************/
 function goToIndex() {
   window.location.href = "index.html";
+}
+
+/************************* GUESTS ******************************/
+function readCSV() {
+  var guestsCSV = 'Invitado,Contacto,Confirma\nrodrigo OCAMPO,0985209533,no\nLiz Maria Victoria Lezcano Aranda,0992244507,no\nJuan Carlos Lezcano,0991542354,no\nAngelica Figueredo,0981503009,no\nJuan Diego Lezcano0994871409,no\nMonserrat Lezcano,0,no\nBetharram Ruiz,0,no\nAndrea Serafini,0,no\nDahiana Oviedo,0,no\nMicela Rodríguez,0,no\nCecilia Florentín,0,no\nTeresa Saldívar,0,no\nMelina Méndez,0,no\nElizabeth Samaniego,0,no\nMónica Fariña,0,no\nBelén Sostoa,0,no\nLucas Brítez,0,no\nNorma Alonso,0991740795,no\nClaudio Ocampo,0985262276,no\nEduardo Ocampo,0983988369,no\nMauricio Ocampo,0971793919,no\nSofia Ocampo,0,no\nEnzo Mereles,0983891464,no\nChristian Portillo,0983476156,no\nVictor Carballo,0994274413,no\nRafael Carballo,0984795361,no\nHugo Rodriguez,0971890008,no\nPedro Silva,0985421360,no\nCristhian Caballero,0971163939,no\nCesar FUCHU Gonzalez,0971666666,no\nHector Ucedo,0981280666,no\nCarolina Bobadilla,0982765107,no';
+  //var guestsCSV = fetch("./files/guestsList.csv").then(res => { return res.text});
+  
+  // fs.readFile('./files/guestsList.csv', 'utf8', (err, data) => {
+  //   if (err) {
+  //     console.error(err);
+  //     return;
+  //   }
+  //   console.log(data);
+  // });
+
+  // console.log(guestsCSV);
+   var lines = guestsCSV.split('\n');
+   var headers = lines[0].split(',');
+
+  for (var i = 1; i < lines.length; i++)
+  {
+    var rowData = lines[i].split(',');
+    guestsArrObj[i] = {};
+
+    for (var j = 0; j < rowData.length; j++)
+    {
+      //guestsArrObj[i][headers[j]] = rowData[j];
+      guestsArrObj[i][j] = rowData[j];
+    }
+  }
+  //console.log(guestsArrObj);
+  //console.table(guestsArrObj);
+}
+
+
+function readCSV2() {
+  const csvData=[];
+  const uploadsuccess=document.getElementById("uploadsuccess").
+      addEventListener("click", () => {
+          Papa.parse(document.getElementById('UploadFile').files[0], {
+              download: true,
+              header: true,
+              skipEmptyLines: true,
+              complete: function (answer) {
+                  console.log("hi");
+                  for (i=0; i<answer.data.length; i++) {
+                      csvData.push(answer.data[i].APFD);
+                  }
+                  console.log(csvData);
+              }
+          });
+      });
+
 }
