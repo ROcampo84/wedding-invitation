@@ -179,7 +179,8 @@ function fnCheckIn()
 function fnGuestValidate()
 {
   //Load the guests' List.
-  readCSV();
+  //readCSV();
+  readCSV4();
   
   //console.log(guestPhone.value);
   for (var i = 1; i < guestsArrObj.length; i++)
@@ -308,4 +309,69 @@ function readCSV2() {
           });
       });
 
+}
+
+
+
+function loadData()
+{
+  $(document).ready(function() {
+    $.ajax({
+      type: "GET",
+      url: "./files/guestsList.csv",
+      dataType: "text",
+      success: function(data) {
+        readCSV3(data); 
+      }
+    });
+  });
+}
+
+function readCSV3(csvText) {
+  
+  var lines = csvText.split('\n');
+  var headers = lines[0].split(',');
+
+  for (var i = 1; i < lines.length; i++)
+  {
+    var rowData = lines[i].split(',');
+    guestsArrObj[i] = {};
+
+    for (var j = 0; j < rowData.length; j++)
+    {
+      //guestsArrObj[i][headers[j]] = rowData[j];
+      guestsArrObj[i][j] = rowData[j];
+    }
+  }
+  //console.log(guestsArrObj);
+  console.table(guestsArrObj);
+}
+
+function readCSV4() {
+  
+  const csvFile = "files/guestsList.csv";
+
+  const res = fetch(csvFile, {
+    method: 'get',
+    headers: {
+        'content-type': 'text/csv;charset=UTF-8'
+    }
+  });
+
+  var lines = csvFile.textContent.split('\n');
+  var headers = lines[0].split(',');
+
+  for (var i = 1; i < lines.length; i++)
+  {
+    var rowData = lines[i].split(',');
+    guestsArrObj[i] = {};
+
+    for (var j = 0; j < rowData.length; j++)
+    {
+      //guestsArrObj[i][headers[j]] = rowData[j];
+      guestsArrObj[i][j] = rowData[j];
+    }
+  }
+  //console.log(guestsArrObj);
+  console.table(guestsArrObj);
 }
