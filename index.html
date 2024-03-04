@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1280px)" href="style_small_display.css">
     <script src="https://kit.fontawesome.com/7b12bcc245.js" crossorigin="anonymous"></script>
     <title>Liz & Rodri: La Boda</title>
 </head>
@@ -33,9 +34,11 @@
         <h3>Nos vamos a casar</h3>
         <h1>Liz & Rodri.</h1>
         <div class="container-out">
-            <h3>Sábado, 20 de Abril, 2024</h3>
-            <h3>Tatarê Jardín Eventos, Ñemby</h3>
-            <button onclick="showCheckin()" class="huge-btn">CONFIRMAR</button>
+            <div class="container-in text">
+                Sábado, 20 de Abril, 2024<br>
+                Tatarê Jardín Eventos, Ñemby
+                <button onclick="showCheckin()" class="huge-btn">CONFIRMAR</button>
+            </div>
             <div class="home-img" id="home-img-lg"></div>
         </div>
     </div>
@@ -101,13 +104,10 @@
         <div class="h-reposition-container">
 
             <div id="story" class="hz-margin">
-                <h2 class="reveal">Nuestra Historia</h2>
-                <h3 class="reveal">no es una historia de Amor ordinaria.</h3>
-                <p class="text reveal">Esta es una historia sencilla,<br>
-                    pero una que no es fácil contar.<br>
+                <h3 class="reveal">Nuestra Historia no es una historia de amor ordinaria.</h3>
+                <p class="text reveal">Esta es una historia sencilla, pero una que no es fácil contar.<br>
                     Como en una fábula, hay dolor.<br>
-                    Y, como una fábula,<br>
-                    está llena de maravillas y de felicidad.</p>
+                    Y, como una fábula, está llena de maravillas y de felicidad.</p>
             </div>
 
             <div class="gallery hz-margin reveal">
@@ -119,25 +119,23 @@
 
             <div class="quote reveal">
                 <h1>“De nadie seré, solo de ti. Hasta que mis huesos se vuelvan cenizas y mi corazón deje de latir”.</h1>
-                <div class="author text">Pablo Neruda</div>
+                <div class="author">Pablo Neruda</div>
             </div>
 
 
-            <div class="hands" id="parallax1"></div>
+            <!-- <div class="hands" id="parallax1"></div> -->
 
-
-            <div class="event-container" id="event">
-                <div class="eventings">
-                    <h2 class="reveal">Evento</h2>
-                    <br>
-                    <div>
+            <div id="event">			   
+                <h2 class="reveal">Evento</h2>
+                <div class="stay-container reveal">
+                    <div class="stay-item">
                         <h3>¿Cómo llegar?</h3>
                         <div class="text">Sigue el enlace<br> a Google Maps</div>
                         <a href="https://maps.app.goo.gl/ujVjW93oLWptDdM56"><div class="text links">ENLACE MAPA</div></a>
                     </div>
-                    <br>
-                    <br>
-                    <div>
+                    <div class="stay-item">
+						
+						 
                         <h3>¿Cómo vestir?</h3>
                         <div class="text">Andá cómodo<br> Nuestra propuesta:</div>
                         <a href="https://pin.it/5BlkSOo"><div class="text links">TENIDA COCKTAIL</div></a>
@@ -203,7 +201,7 @@
             <div class="registry-img registry-img-sm"></div>
 
             <div class="parting-message reveal">
-                <h1>Esperamos verte!</h1>
+                <h1>¡Esperamos verte!</h1>
                 <button onclick="showCheckin()" class="huge-btn">CONFIRMAR</button>
             </div>
 
@@ -212,19 +210,14 @@
                 <div style=" background: url(wedding/img/blanco.jpg); padding:0px 0; background: inherit; margin: 50px 20px;">
                     <div style="border: 1px solid #999876; border-radius: 20px; padding: 50px 0px;">
                         
-                        <!-- <h4 class="large-heading mt-2 mb-1" style="margin:auto; width:50%; padding:10px;">Confirmar asistencia</h4> -->
-                        <h3 style="margin:auto; width:50%; padding:10px;">Confirmar asistencia</h4>
+                        <h3 style="margin:auto; width:50%; padding:10px;">Verificar Invitado</h4>
                         
                         <div>
-                            <div class="author text">Gracias por acompañarnos en este momento tan importante.</div>
+                            <div class="author text">Por favor ingresa tu número de teléfono.</div>
                         </div>
             
                         <div class="row  flex-column" style="flex-direction:column">
                             
-                            <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;">
-                                <input type="text" name="nombreyapellido" id="checkName" placeholder="Nombre y Apellido">
-                            </div>
-    
                             <br>
                             <div class="col-12 col-md-4 col-lg-4" style="margin:auto; width:50%; padding:10px;" >
                                 <input type="text" name="telefono" id="checkPhone" placeholder="Número Celular" class="form-control">
@@ -242,11 +235,33 @@
                 </div>
             </div>
 
+
+            <div id="guestSection" style="display: none;">
+                <div style=" background: url(wedding/img/blanco.jpg); padding:0px 0; background: inherit; margin: 50px 20px;">
+                    <div style="border: 1px solid #999876; border-radius: 20px; padding: 50px 0px;">
+                        
+                        <h3 style="margin:auto; width:50%; padding:10px;">Confirmar asistencia</h4>
+                        
+                        <div>
+                            <div class="author text" id="guestCustomeMsg">Te solicitamos enviar un mensaje para confirmar tu asistencia.</div>
+                        </div>
+                        <br>
+                        <div>
+                            <div class="author text">Gracias por acompañarnos en este momento tan importante.</div>
+                        </div>
+            
+                        <button id="btnSendMsg1" type="submit" class="huge-btn" style="margin:auto; left:50%; padding:10px;">Confirmar con Liz</button>
+                        <br>
+                        <button id="btnSendMsg2" type="submit" class="huge-btn" style="margin:auto; left:50%; padding:10px;">Confirmar con Rodrigo</button>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
             
             <div style=" background: url(wedding/img/blanco.jpg); padding:0px 0; background: inherit; margin: 50px 20px;">
                 <div style="border: 1px solid #999876; border-radius: 20px; padding: 50px 0px;">
                     <div class="countdown-container">
-                        <!-- <h2 style="font-family: 'Nyght Serif Dark' !important; font-size: 3em; font-weight: bold; font-style: italic;">Cuenta regresiva</h2> -->
                         <h2 class="h2-special">Cuenta regresiva</h2>
                     </div>
                     
@@ -278,8 +293,8 @@
 
             <footer>
                 <h2>Contáctanos al</h2>
-                <h3>Liz Lezcano: +595-992-244507</h3>
-                <h3>Rodrigo Ocampo: +595-985-209533</h3>
+                <h2>Liz Lezcano: +595-992-244507</h2>
+                <h2>Rodrigo Ocampo: +595-985-209533</h2>
                 <div class="text">© 2024 Liz y Rodri: La boda.<br>Desarrollado por <a href="https://github.com/ROcampo84" class="text">@ROcampoDev</a></div>
             </footer>
         </div>

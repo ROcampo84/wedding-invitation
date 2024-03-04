@@ -59,13 +59,13 @@ h3{
 }
 .huge-btn{
     display: block;
-    font-size: 1rem;
+    font-size: 2rem;
     background: transparent;
     border: 1px solid #212121;
-    padding: 25px 50px;
+    padding: 15px 30px;
     border-radius: 50px;
     width: fit-content;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 .huge-btn:hover{
     color: grey;
@@ -81,13 +81,20 @@ h3{
     position: relative;
     top: 100vh;
 }
-
+.h2-special {
+    text-align: center;
+    font-family: 'Nyght Serif Dark' !important; 
+    font-size: 3em;
+    font-weight: bold; 
+    font-style: italic;
+    margin-left:15%
+}
 /* <===================NAVBAR===================> */
 
 nav{
     height: 3vh;
     width: 100%;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
 }
 label.logo{
     font-size: 35px;
@@ -107,7 +114,7 @@ nav ul li{
 }
 nav ul li a{
     font-family: 'Quicksand', sans-serif;
-    font-size: 17px;
+    font-size: 25px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
@@ -128,18 +135,18 @@ a:hover{
 #check{
     display: none;
 }
-/* @media (max-width:1000px){
+@media (max-width:1280px){
     label.logo{
         font-size: 20px;
     }
     nav ul li a{
-        font-size: 10px;
+        font-size: 25px;
     }
     html{
         font-size: 10px;
     }
-} */
-/* @media (max-width:570px){
+}
+@media (max-width:570px){
     .checkbtn{
         display: block;
     }
@@ -169,13 +176,13 @@ a:hover{
     #check:checked ~ ul{
         left: 0;
     }
-} */
+}
 
 /* <===================COUNTDOWN===================> */
 .countdown-container {
     display: flex;
     width: 100%;
-    max-width: 70%;
+    max-width: 100%;
     justify-content: space-between;
   }
   
@@ -191,15 +198,15 @@ a:hover{
     border: 5px solid rgba(255,255,255,0.3);
     width: 140px;
     height: 140px;
-    border-radius: 99px;
+    border-radius: 90px;
   }
   
   .days,
   .hours,
   .minutes,
   .seconds {
-    font-size: 2.1em; 
-    margin: 10px 0;
+    font-size: 4.5em; 
+    margin: 0px 0;
   }
   
   
@@ -212,7 +219,7 @@ a:hover{
     font-size: 1.0em;
   }
   
-  /* @media (max-width: 700px) {
+  @media (max-width: 700px) {
     
     .countdown-container {
       max-width: 100%;
@@ -226,12 +233,12 @@ a:hover{
       width: 80px;
       height: 80px;
     }
-  } */
+  }
 
 /* <===================HOME===================> */
 
 .container-out{
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -245,15 +252,15 @@ a:hover{
     display: none;
     width: 100%;
     margin: 20px 0 0 0;
-    height: 50vh;
+    height: 60vh;
 }
 #home-img-lg{
-    display:flex;
+    display: block;
     height: 110vh;
-    width: 50%;
-    background-position-x: -200px;
+    width: 50vw;
+    background-position-x: -100px;
 }
-/* @media (max-width:1000px){
+@media (max-width:1000px){
     .container-out{
         flex-direction: column;
     }
@@ -263,7 +270,7 @@ a:hover{
     #home-img-lg{
         display: none;
     }
-} */
+}
 
 /* <===================TIMELINE===================> */
 
@@ -291,16 +298,16 @@ a:hover{
 }
 .timing-img01{
     background-image: url('images/timing01.png');
-    height: 15vh;
-    width: 30vw;
+    height: 25vh;
+    width: 100%;
     background-position: center;
     background-size: cover;
-    margin-left: 60px;
+    margin-left: 20px;
 }
 .timing-img02{
     background-image: url('images/timing02.png');
     height: 15vh;
-    width: 30vw;
+    width: 50%;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
@@ -308,7 +315,7 @@ a:hover{
 .timing-img03{
     background-image: url('images/timing03.png');
     height: 15vh;
-    width: 30vw;
+    width: 35vw;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
@@ -316,15 +323,15 @@ a:hover{
 .timing-img04{
     background-image: url('images/timing04.png');
     height: 15vh;
-    width: 30vw;
+    width: 35vw;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
 }
 .timing-img05{
     background-image: url('images/timing05.png');
-    height: 15vh;
-    width: 40vw;
+    height: 17vh;
+    width: 45vw;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
@@ -332,7 +339,7 @@ a:hover{
 .timing-img06{
     background-image: url('images/timing06.png');
     height: 15vh;
-    width: 30vw;
+    width: 25vw;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
@@ -340,7 +347,7 @@ a:hover{
 .timing-img07{
     background-image: url('images/timing07.png');
     height: 15vh;
-    width: 30vw;
+    width: 35vw;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
@@ -348,7 +355,7 @@ a:hover{
 .timing-img08{
     background-image: url('images/timing08.png');
     height: 15vh;
-    width: 30vw;
+    width: 35vw;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
@@ -356,7 +363,7 @@ a:hover{
 .timing-img09{
     background-image: url('images/timing09.png');
     height: 15vh;
-    width: 30vw;
+    width: 35vw;
     background-position: center;
     background-size: cover;
     margin-left: 60px;
@@ -367,7 +374,7 @@ a:hover{
 .timeline-container .text{
     padding: 1rem 0 1rem 4rem;
 }
-/* @media (max-width:1000px){
+@media (max-width:1280px){
     .timeline{
         background-color: var(--grey-color);
         float: none;
@@ -384,7 +391,7 @@ a:hover{
         height: 50vh;
         width: 100%;
     }
-} */
+}
 
 /* <===================EVENT===================> */
 
@@ -441,7 +448,8 @@ a:hover{
     font-size: var(--h3-size);
     line-height: var(--h3-size);
 }
-/* @media (max-width:1000px){
+
+@media (max-width:1280px){
     .h-reposition-container{
         position: relative;
         top: 0;
@@ -452,15 +460,16 @@ a:hover{
     #story h3{
         width: 100%;
         margin: 5px 0;
-        font-size: var(--h3-size);
+        font-size: 3rem;
+        line-height: 4rem;
     }
     #story p{
         width: 100%;
         margin: 5px 0;
-        font-size: var(--text-size);
-        line-height: var(--text-size);
+        font-size: 2rem;
+        line-height: 3rem;
     }
-} */
+}
 
 /* <===================GALLERY===================> */
 
@@ -479,30 +488,31 @@ a:hover{
 }
 .gallery-img:nth-child(1){
     background-image: url('images/picGallery1.jpg');
-    background-position-x: right;
+    background-position-x: center;
 }
 .gallery-img:nth-child(3){
     background-image: url('images/picGallery2.jpg');
+    background-position-x: center;
 }
 .gallery-img:nth-child(2){
-    background-position-y: top;
+    background-position-y: center;
     background-image: url('images/picGallery3.jpg');
 }
-/* @media (max-width:1000px){
+@media (max-width:1280px){
     .gallery{
         flex-direction: column;
         padding: 0;
     }
     .gallery-img{
         width: 100vw;
-        height: 90vw;
+        height: 50vw;
         margin: 2px 0;
     }
     .gallery-img:nth-child(2){
         position: relative;
         left: -(var(--horizontal-margin-spacing));
     }
-} */
+}
 
 /* <===================QUOTE===================> */
 .quote{
@@ -518,12 +528,16 @@ a:hover{
     text-align: center;
     margin: 20px 0 10vh 0;
 }
-/* @media (max-width:1570px){
+@media (max-width:1280px){
     .quote h1{
-        font-size: 2rem;
-        line-height: 2rem;
+        font-size: 3rem;
+        line-height: 4rem;
     }
-} */
+    .author {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
 
 /* <===================HANDS===================> */
 
@@ -556,7 +570,7 @@ a:hover{
     cursor: pointer;
     text-decoration: underline;
 }
-/* @media (max-width:1000px){
+@media (max-width:1000px){
     .stay-container{
         flex-direction: column;
         margin: 10px 0;
@@ -564,12 +578,12 @@ a:hover{
     .stay-item{
         margin: 2vh 0;
     }
-} */
+}
 
 /* <===================REGISTRY===================> */
 
 #registry{
-    padding: 20vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
+    padding: 5vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -584,8 +598,8 @@ a:hover{
 }
 .registry-img{
     display: block;
-    height: 100vh;
     width: 100%;
+    height: 40vh;
     background-image: url('images/picRegistry.jpg');
     background-size: cover;
     background-position-y: top;
@@ -598,13 +612,14 @@ a:hover{
 .registry-img-lg{
     display: block;
 }
-/* @media (max-width:1000px){
+@media (max-width:1280px){
     #registry{
         flex-direction: column;
     }
     .registry-img{
+        display: block;
         width: 100%;
-        height: 50vh;
+        height: 40vh;
     }
     .registry-img-sm{
         margin-top: 10vh;
@@ -619,7 +634,7 @@ a:hover{
     #registry button{
         margin-inline: auto;
     }
-} */
+}
 
 /* <===================COUNTER ===================> */
 .count-sec {

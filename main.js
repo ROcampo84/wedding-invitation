@@ -2,14 +2,19 @@ const numbers = /^[0-9]+$/;
 const letters = /^[a-zA-Z]+$/ 
 
 const parallax = document.getElementById("home-img-lg");
-const parallax1 = document.getElementById("parallax1");
+//const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
 const buttonCheckIn = document.getElementById("btnCheckIn");
+const buttonSendMsg1 = document.getElementById("btnSendMsg1");
+const buttonSendMsg2 = document.getElementById("btnSendMsg2");
 buttonCheckIn.onclick = fnCheckIn;
+buttonSendMsg1.onclick = fnSendMsg1;
+buttonSendMsg2.onclick = fnSendMsg2;
 
 var vGuestName = "";
+var vGuestPhone = "";
 var vGuestIndex = 0;
-const guestName = document.getElementById("checkName");
+//const guestName = document.getElementById("checkName");
 const guestPhone = document.getElementById("checkPhone");
 const guestsArrObj = [];
 
@@ -24,7 +29,7 @@ window.addEventListener("scroll", function()
 {
     let offset = window.pageYOffset;
     offset-=3100;
-    parallax1.style.backgroundPositionY = offset*(0.1) + "px";
+    //parallax1.style.backgroundPositionY = offset*(0.1) + "px";
 })
 
 window.addEventListener("scroll", function()
@@ -159,19 +164,20 @@ function goToCheckin() {
 
 function fnCheckIn()
 {
-  //Validate name input.
-  if (!fnNameValidate()) return;
-  
   //Validate phone input.
   if (!fnPhoneValidate()) return;
   
   //Validate guest.
   if (!fnGuestValidate()) return; 
 
-  alert("Gracias " + vGuestName.toUpperCase() + " por confirmar tu presencia!");
+  //alert("Hola " + vGuestName.toUpperCase() + "!!!");
+  
+  //Show Guest section.
+  showGuestSection();
+
   //Clean fields.
   guestPhone.value = "";
-  guestName.value = "";
+  
   //Hide Checkin section.
   showCheckin();
 }
@@ -179,8 +185,8 @@ function fnCheckIn()
 function fnGuestValidate()
 {
   //Load the guests' List.
-  //readCSV();
-  readCSV4();
+  readCSV();
+  //readCSV4();
   
   //console.log(guestPhone.value);
   for (var i = 1; i < guestsArrObj.length; i++)
@@ -190,6 +196,7 @@ function fnGuestValidate()
     if (compare(guestPhone.value, guestsArrObj[i][1])) 
     {
       vGuestName = guestsArrObj[i][0];
+      vGuestPhone = guestsArrObj[i][1];
       vGuestIndex = i;
       return true;
     }
@@ -205,17 +212,6 @@ function fnPhoneValidate()
   {
     guestPhone.value = "";
     alert("Teléfono no válido. Ejemplo: (09XX)-123-456 ó 09XX123456");
-    return false;
-  }
-  return true;
-}
-
-function fnNameValidate()
-{
-  if (!guestName.value.split(" ").join("").match(letters))
-  {
-    guestName.value = "";
-    alert("Nombre no válido");
     return false;
   }
   return true;
@@ -252,6 +248,39 @@ function showCheckin()
   }
 }
 
+
+/************************* GUEST ******************************/
+var divGuest = document.getElementById("guestSection");
+var txtGuestMsg = document.getElementById("guestCustomeMsg");
+var displayGuest = 1;
+
+function showGuestSection()
+{
+  if (displayGuest == 1)
+  {
+    window.location.href = "#guestSection";
+    divGuest.style.display = 'block';
+    txtGuestMsg.textContent = "Hola " + vGuestName.toUpperCase() + "!!!";
+    displayGuest = 0;
+  }
+  else
+  {
+    divGuest.style.display = 'none';
+    displayGuest = 1;
+  }
+}
+
+function fnSendMsg1()
+{
+  //Hide Guest section.
+  showGuestSection();
+}
+
+function fnSendMsg2()
+{
+  //Hide Guest section.
+  showGuestSection();
+}
 
 /************************* INDEX ******************************/
 function goToIndex() {
@@ -339,11 +368,9 @@ function readCSV3(csvText) {
 
     for (var j = 0; j < rowData.length; j++)
     {
-      //guestsArrObj[i][headers[j]] = rowData[j];
       guestsArrObj[i][j] = rowData[j];
     }
   }
-  //console.log(guestsArrObj);
   console.table(guestsArrObj);
 }
 
@@ -368,10 +395,8 @@ function readCSV4() {
 
     for (var j = 0; j < rowData.length; j++)
     {
-      //guestsArrObj[i][headers[j]] = rowData[j];
       guestsArrObj[i][j] = rowData[j];
     }
   }
-  //console.log(guestsArrObj);
   console.table(guestsArrObj);
 }
