@@ -13,6 +13,8 @@ buttonSendMsg2.onclick = fnSendMsg2;
 
 var vGuestName = "";
 var vGuestPhone = "";
+var vGuestTable = "";
+var vGuestQuantity = "";
 var vGuestIndex = 0;
 //const guestName = document.getElementById("checkName");
 const guestPhone = document.getElementById("checkPhone");
@@ -197,6 +199,8 @@ function fnGuestValidate()
     {
       vGuestName = guestsArrObj[i][0];
       vGuestPhone = guestsArrObj[i][1];
+      vGuestQuantity = guestsArrObj[i][2];
+      vGuestTable = guestsArrObj[i][3];
       vGuestIndex = i;
       return true;
     }
@@ -251,7 +255,9 @@ function showCheckin()
 
 /************************* GUEST ******************************/
 var divGuest = document.getElementById("guestSection");
-var txtGuestMsg = document.getElementById("guestCustomeMsg");
+var txtGuestMsgName = document.getElementById("guestMsgName");
+var txtGuestMsgTable = document.getElementById("guestMsgTable");
+var txtGuestMsgQuan = document.getElementById("guestMsgQuantity");
 var displayGuest = 1;
 
 function showGuestSection()
@@ -260,7 +266,9 @@ function showGuestSection()
   {
     window.location.href = "#guestSection";
     divGuest.style.display = 'block';
-    txtGuestMsg.textContent = "Hola " + vGuestName.toUpperCase() + "!!!";
+    txtGuestMsgName.textContent = "Hola " + vGuestName.toUpperCase() + "!!!";
+    txtGuestMsgTable.textContent = "Te toca la mesa " + vGuestTable + ".";
+    txtGuestMsgQuan.textContent = "Cantidad de acompañantes: " + vGuestQuantity + ".";
     displayGuest = 0;
   }
   else
@@ -272,12 +280,14 @@ function showGuestSection()
 
 function fnSendMsg1()
 {
+  location = "https://api.whatsapp.com/send?phone=+595992244507&text=Hola!%0AClaro%20que%20voy%20a%20la%20boda.%0AAdemas%2C%20te%20llevo%20un%20super%20regalo.";
   //Hide Guest section.
   showGuestSection();
 }
 
 function fnSendMsg2()
 {
+  location = "https://api.whatsapp.com/send?phone=+595985209533&text=Hola!%0AClaro%20que%20voy%20a%20la%20boda.%0AAdemas%2C%20te%20llevo%20un%20super%20regalo.";
   //Hide Guest section.
   showGuestSection();
 }
@@ -289,7 +299,7 @@ function goToIndex() {
 
 /************************* GUESTS ******************************/
 function readCSV() {
-  var guestsCSV = 'Invitado,Contacto,Confirma\nrodrigo OCAMPO,0985209533,no\nLiz Maria Victoria Lezcano Aranda,0992244507,no\nJuan Carlos Lezcano,0991542354,no\nAngelica Figueredo,0981503009,no\nJuan Diego Lezcano0994871409,no\nMonserrat Lezcano,0,no\nBetharram Ruiz,0,no\nAndrea Serafini,0,no\nDahiana Oviedo,0,no\nMicela Rodríguez,0,no\nCecilia Florentín,0,no\nTeresa Saldívar,0,no\nMelina Méndez,0,no\nElizabeth Samaniego,0,no\nMónica Fariña,0,no\nBelén Sostoa,0,no\nLucas Brítez,0,no\nNorma Alonso,0991740795,no\nClaudio Ocampo,0985262276,no\nEduardo Ocampo,0983988369,no\nMauricio Ocampo,0971793919,no\nSofia Ocampo,0,no\nEnzo Mereles,0983891464,no\nChristian Portillo,0983476156,no\nVictor Carballo,0994274413,no\nRafael Carballo,0984795361,no\nHugo Rodriguez,0971890008,no\nPedro Silva,0985421360,no\nCristhian Caballero,0971163939,no\nCesar FUCHU Gonzalez,0971666666,no\nHector Ucedo,0981280666,no\nCarolina Bobadilla,0982765107,no';
+  var guestsCSV = 'Invitado,Telefono,Cantidad,Mesa,Confirma\nJuan Carlos Lezcano,0991542354,3,A,NO\nAngelica Figueredo,0981503009,3,A,NO\nJuan Diego Lezcano,0994871409,A,NO\nMonserrat Lezcano,0,3,A,NO\nBetharram Ruiz,0,1,B,NO\nAndrea Serafini,0,1,B,NO\nDahiana Oviedo,0,1,B,NO\nBetharram Ruiz,0,1,B,NO\nAndrea Serafini,0,1,B,NO\nDahiana Oviedo,0,1,B,NO\nMicela Rodríguez,0,2,C,NO\nCecilia Florentín,0,2,C,NO\nTeresa Saldívar,0,1,D,NO\nMelina Méndez,0,1,D,NO\nElizabeth Samaniego,0,1,D,NO\nMónica Fariña,0,1,D,NO\nBelén Sostoa,0,1,D,NO\nLucas Brítez,0,2,C,NO\nNorma Alonso,0991740795,1,E,NO\nClaudio Ocampo,0985262276,3,E,NO\nEduardo Ocampo,0983988369,5,E,NO\nEnzo Mereles,0983891464,2,F,NO\nChristian Portillo,0983476156,1,F,NO\nVictor Carballo,0994274413,1,F,NO\nRafael Carballo,0984795361,1,F,NO\nHugo Rodriguez,0971890008,2,G,NO\nPedro Silva,0985421360,2,G,NO\nChristian Caballero,0971163939,1,G,NO\nCesar Gonzalez Fuchu,0971666666,1,H,NO\nHector Ucedo,0981280666,2,H,NO\nCarolina Bobadilla,0982765107,1,H,NO\nLiz Lezcano,0992244507,2,X,NO\nRodrigo Ocampo,0985209533,2,X,NO';
   //var guestsCSV = fetch("./files/guestsList.csv").then(res => { return res.text});
   
   // fs.readFile('./files/guestsList.csv', 'utf8', (err, data) => {
@@ -400,3 +410,5 @@ function readCSV4() {
   }
   console.table(guestsArrObj);
 }
+
+/************************* USEFULL ******************************/
