@@ -51,6 +51,7 @@ h3{
   .reveal.active{
     transform: translateY(0);
     opacity: 1;
+    text-align: center;
   }
 .text{
     font-family: 'Quicksand', sans-serif;
@@ -68,6 +69,20 @@ h3{
     margin: 20px 0;
 }
 .huge-btn:hover{
+    color: grey;
+    border-color: grey;
+}
+.normal-btn{
+    display: block;
+    font-size: 1.2rem;
+    background: transparent;
+    border: 1px solid #212121;
+    padding: 10px 15px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 10px 0;
+}
+.normal-btn:hover{
     color: grey;
     border-color: grey;
 }
@@ -374,6 +389,11 @@ a:hover{
 .timeline-container .text{
     padding: 1rem 0 1rem 4rem;
 }
+.timeline-h3-small{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+}
 @media (max-width:1280px){
     .timeline{
         background-color: var(--grey-color);
@@ -437,7 +457,7 @@ a:hover{
     padding-top: 10vh;
     display: flex;
     flex-direction: row;
-    margin: 10vh 0;
+    margin: 2vh 0;
 }
 #story h3{
     width: 40vw;
@@ -460,7 +480,7 @@ a:hover{
     #story h3{
         width: 100%;
         margin: 5px 0;
-        font-size: 3rem;
+        font-size: 2.44rem;
         line-height: 4rem;
     }
     #story p{
@@ -516,7 +536,7 @@ a:hover{
 
 /* <===================QUOTE===================> */
 .quote{
-    margin: 10vh 0;
+    margin: 0vh 0vh 40vh;
 }
 .quote h1{
     width: 55vw;
@@ -530,7 +550,7 @@ a:hover{
 }
 @media (max-width:1280px){
     .quote h1{
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 4rem;
     }
     .author {
@@ -606,6 +626,12 @@ a:hover{
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
 }
+
+.registry-autor-text {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+}
+
 .registry-img-sm{
     display: none;
 }
@@ -700,12 +726,21 @@ footer{
     background-color: var(--grey-color);
     padding: 10vh 30px;
 }
-footer h2{
-    font-size: 2Srem;
+
+.footer_h3_small {
+    font-size: 2rem;
     font-weight: normal;
 }
 
+.footer_h2_small {
+    font-size: 1.7rem;
+    font-weight: normal;
+}
 
+.footer_text_small {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
 
 /* <===================INPUT===================> */
 input:invalid {

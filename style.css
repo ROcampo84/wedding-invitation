@@ -71,6 +71,21 @@ h3{
     color: grey;
     border-color: grey;
 }
+
+.normal-btn{
+    display: block;
+    font-size: 1.2rem;
+    background: transparent;
+    border: 1px solid #212121;
+    padding: 10px 15px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: 10px 0;
+}
+.normal-btn:hover{
+    color: grey;
+    border-color: grey;
+}
 .v-reposition-container{
     position: absolute;
     left: 0;
@@ -441,26 +456,6 @@ a:hover{
     font-size: var(--h3-size);
     line-height: var(--h3-size);
 }
-/* @media (max-width:1000px){
-    .h-reposition-container{
-        position: relative;
-        top: 0;
-    }
-    #story{
-        flex-direction: column;
-    }
-    #story h3{
-        width: 100%;
-        margin: 5px 0;
-        font-size: var(--h3-size);
-    }
-    #story p{
-        width: 100%;
-        margin: 5px 0;
-        font-size: var(--text-size);
-        line-height: var(--text-size);
-    }
-} */
 
 /* <===================GALLERY===================> */
 
@@ -488,25 +483,10 @@ a:hover{
     background-position-y: top;
     background-image: url('images/picGallery3.jpg');
 }
-/* @media (max-width:1000px){
-    .gallery{
-        flex-direction: column;
-        padding: 0;
-    }
-    .gallery-img{
-        width: 100vw;
-        height: 90vw;
-        margin: 2px 0;
-    }
-    .gallery-img:nth-child(2){
-        position: relative;
-        left: -(var(--horizontal-margin-spacing));
-    }
-} */
 
 /* <===================QUOTE===================> */
 .quote{
-    margin: 10vh 0;
+    margin: 0vh 0vh 40vh;
 }
 .quote h1{
     width: 55vw;
@@ -518,12 +498,6 @@ a:hover{
     text-align: center;
     margin: 20px 0 10vh 0;
 }
-/* @media (max-width:1570px){
-    .quote h1{
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-} */
 
 /* <===================HANDS===================> */
 
@@ -556,15 +530,6 @@ a:hover{
     cursor: pointer;
     text-decoration: underline;
 }
-/* @media (max-width:1000px){
-    .stay-container{
-        flex-direction: column;
-        margin: 10px 0;
-    }
-    .stay-item{
-        margin: 2vh 0;
-    }
-} */
 
 /* <===================REGISTRY===================> */
 
@@ -584,13 +549,12 @@ a:hover{
 }
 .registry-img{
     display: block;
-    height: 100vh;
-    width: 100%;
+    height: 70vh;
+    width: 50%;
     background-image: url('images/picRegistry.jpg');
     background-size: cover;
     background-position-y: top;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
 }
 .registry-img-sm{
     display: none;
@@ -598,28 +562,6 @@ a:hover{
 .registry-img-lg{
     display: block;
 }
-/* @media (max-width:1000px){
-    #registry{
-        flex-direction: column;
-    }
-    .registry-img{
-        width: 100%;
-        height: 50vh;
-    }
-    .registry-img-sm{
-        margin-top: 10vh;
-        display: block;
-    }
-    .registry-img-lg{
-        display: none;
-    }
-    .registry-container{
-        width: 100%;
-    }
-    #registry button{
-        margin-inline: auto;
-    }
-} */
 
 /* <===================COUNTER ===================> */
 .count-sec {
