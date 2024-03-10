@@ -124,7 +124,8 @@ const countDownClock = (number = 100, format = 'seconds') => {
 */
 // To set two dates to two variables
 var date1 = new Date();
-var date2 = new Date("Sat, 20 Apr 2024 18:00:00 GMT");
+/* PYT != GMT: PYST == GTM+3 */
+var date2 = new Date("Sat, 20 Apr 2024 20:00:00 GMT");
   
 // To calculate the time difference of two dates
 var Difference_In_Time = date2.getTime() - date1.getTime();
@@ -215,7 +216,7 @@ function fnPhoneValidate()
   if (!guestPhone.value.match(/^\(?(\d{4})\)?[- ]?(\d{3})[- ]?(\d{3})$/))
   {
     guestPhone.value = "";
-    alert("Teléfono no válido. Ejemplo: (09XX)-123-456 ó 09XX123456");
+    alert("Teléfono no válido. Ejemplo: 09XX123456");
     return false;
   }
   return true;
