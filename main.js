@@ -279,14 +279,14 @@ function showGuestSection()
 
 function fnSendMsg1()
 {
-  location = "https://api.whatsapp.com/send?phone=+595992244507&text=Hola!%0AClaro%20que%20voy%20a%20la%20boda.%0AAdemas%2C%20te%20llevo%20un%20super%20regalo.";
+  location = "https://api.whatsapp.com/send?phone=+595992244507&text=Hola%20Liz!%0AClaro%20que%20voy%20a%20la%20boda.%0ANos%20vemos%20en%20Tatare.";
   //Hide Guest section.
   showGuestSection();
 }
 
 function fnSendMsg2()
 {
-  location = "https://api.whatsapp.com/send?phone=+595985209533&text=Hola!%0AClaro%20que%20voy%20a%20la%20boda.%0AAdemas%2C%20te%20llevo%20un%20super%20regalo.";
+  location = "https://api.whatsapp.com/send?phone=+595985209533&text=Hola%20Rodrigo!%0AClaro%20que%20voy%20a%20la%20boda.%0ANos%20vemos%20en%20Tatare.";
   //Hide Guest section.
   showGuestSection();
 }
