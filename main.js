@@ -267,7 +267,7 @@ function showGuestSection()
     window.location.href = "#guestSection";
     divGuest.style.display = 'block';
     txtGuestMsgName.textContent = "Hola " + vGuestName.toUpperCase() + "!!!";
-    txtGuestMsgQuan.textContent = "Cantidad de acompañantes: " + vGuestQuantity + ".";
+    txtGuestMsgQuan.textContent = "Válido para " + vGuestQuantity + " persona(s).";
     displayGuest = 0;
   }
   else
