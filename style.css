@@ -97,6 +97,15 @@ h3{
     top: 100vh;
 }
 
+.h2-special {
+    text-align: center;
+    font-family: 'Nyght Serif Dark' !important; 
+    font-size: 3em;
+    font-weight: bold; 
+    font-style: italic;
+    margin-left:50%;
+    margin-bottom: 3rem;
+}
 /* <===================NAVBAR===================> */
 
 nav{

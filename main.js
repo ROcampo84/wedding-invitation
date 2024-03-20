@@ -13,7 +13,7 @@ buttonSendMsg2.onclick = fnSendMsg2;
 
 var vGuestName = "";
 var vGuestPhone = "";
-var vGuestTable = "";
+//var vGuestTable = "";
 var vGuestQuantity = "";
 var vGuestIndex = 0;
 //const guestName = document.getElementById("checkName");
@@ -201,7 +201,7 @@ function fnGuestValidate()
       vGuestName = guestsArrObj[i][0];
       vGuestPhone = guestsArrObj[i][1];
       vGuestQuantity = guestsArrObj[i][2];
-      vGuestTable = guestsArrObj[i][3];
+      //vGuestTable = guestsArrObj[i][3];
       vGuestIndex = i;
       return true;
     }
@@ -257,7 +257,6 @@ function showCheckin()
 /************************* GUEST ******************************/
 var divGuest = document.getElementById("guestSection");
 var txtGuestMsgName = document.getElementById("guestMsgName");
-var txtGuestMsgTable = document.getElementById("guestMsgTable");
 var txtGuestMsgQuan = document.getElementById("guestMsgQuantity");
 var displayGuest = 1;
 
@@ -268,7 +267,6 @@ function showGuestSection()
     window.location.href = "#guestSection";
     divGuest.style.display = 'block';
     txtGuestMsgName.textContent = "Hola " + vGuestName.toUpperCase() + "!!!";
-    txtGuestMsgTable.textContent = "Te toca la mesa " + vGuestTable + ".";
     txtGuestMsgQuan.textContent = "Cantidad de acompañantes: " + vGuestQuantity + ".";
     displayGuest = 0;
   }
