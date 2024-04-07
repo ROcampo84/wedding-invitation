@@ -395,6 +395,16 @@ a:hover{
     font-weight: 500;
     text-align: center;
 }
+.timing-collapsed
+{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .timing-collapsed
+    {
+        display: block;
+    }   
+}
 @media (max-width:1280px){
     .timeline{
         background-color: var(--grey-color);

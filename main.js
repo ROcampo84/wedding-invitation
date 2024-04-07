@@ -125,7 +125,7 @@ const countDownClock = (number = 100, format = 'seconds') => {
 // To set two dates to two variables
 var date1 = new Date();
 /* PYT != GMT: PYST == GTM+3 */
-var date2 = new Date("Sat, 20 Apr 2024 20:00:00 GMT");
+var date2 = new Date("Sat, 20 Apr 2024 21:00:00 GMT");
   
 // To calculate the time difference of two dates
 var Difference_In_Time = date2.getTime() - date1.getTime();

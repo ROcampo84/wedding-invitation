@@ -328,6 +328,7 @@ a:hover{
     background-position: center;
     background-size: cover;
     margin-left: 60px;
+    
 }
 .timing-img03{
     background-image: url('images/timing03.png');
@@ -390,6 +391,16 @@ a:hover{
 }
 .timeline-container .text{
     padding: 1rem 0 1rem 4rem;
+}
+.timing-collapsed
+{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .timing-collapsed
+    {
+        display: block;
+    }   
 }
 /* @media (max-width:1000px){
     .timeline{
